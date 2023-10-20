@@ -1,13 +1,13 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import helloReducer from "./reducers/redux/hello";
+import messageReducer from "./redux/reducers/message";
 import createSagaMiddleware from "redux-saga";
-import root from "./reducers/saga/root";
+import root from "./redux/sagas/root";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
 
 const rootReducers = combineReducers({
-  hello: helloReducer,
+  message: messageReducer,
 });
 
 const persistConfig = {
