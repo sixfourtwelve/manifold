@@ -13,7 +13,8 @@ const messageSlice = createSlice({
       state.message = action.payload;
     },
     upperCaseMessage(state: MessageState) {
-      state.message = state.message.toUpperCase();
+      const updated = state.message.toUpperCase();
+      state.message = updated;
     },
   },
 });
